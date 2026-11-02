@@ -90,5 +90,3 @@ Call the demo line: **+1 (712) 671-6096**
 Built by [Faheem Abbas](https://bluemoonways.vercel.app/)
 
 ---
-
-*Developers: see the [technical setup guide](docs/SETUP.md) for installation and configuration.*
