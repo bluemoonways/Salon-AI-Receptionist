@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glow &amp; Co Salon | AI receptionist that answers every call</title>
+<meta name="description" content="An AI receptionist for salons. It answers every call, books, reschedules and cancels appointments 24/7. Call +1 (712) 671-6096 to try it.">
+<meta property="og:title" content="Glow &amp; Co Salon">
+<meta property="og:description" content="Never miss a salon booking again. Call the demo line and book a haircut with our AI receptionist.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📞</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf5f8; --surface:#ffffff; --ink:#26122e; --muted:#6b5a72; --line:#e6d9e4;
+  --berry:#b4236b; --berry-ink:#ffffff; --ok:#17695f; --ok-bg:#dff3ee; --bubble:#f1e6ee;
+  --head:'Bricolage Grotesque','Trebuchet MS',system-ui,sans-serif;
+  --body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1a0f20; --surface:#251630; --ink:#f6ecf4; --muted:#bba9c2; --line:#3b2748;
+    --berry:#ff6fae; --berry-ink:#2a0a1a; --ok:#7fe0cf; --ok-bg:#16332f; --bubble:#33213f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1a0f20; --surface:#251630; --ink:#f6ecf4; --muted:#bba9c2; --line:#3b2748;
+  --berry:#ff6fae; --berry-ink:#2a0a1a; --ok:#7fe0cf; --ok-bg:#16332f; --bubble:#33213f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--berry);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--head);line-height:1.05;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700}
+h3{font-size:1.2rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+
+header{padding:20px 0}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:var(--head);font-weight:800;font-size:1.15rem;text-decoration:none;letter-spacing:-.02em}
+.brand span{color:var(--berry)}
+.nav a.link{margin-right:18px;text-decoration:none;color:var(--muted);font-weight:500}
+.nav a.link:hover{color:var(--ink)}
+@media(max-width:560px){.nav a.link{display:none}}
+.btn{display:inline-block;background:var(--berry);color:var(--berry-ink);font-weight:600;text-decoration:none;padding:12px 20px;border-radius:999px;border:0;font:600 1rem var(--body);cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
+
+.hero{padding:40px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:36px}}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800}
+.hero .sub{margin-top:20px;font-size:1.2rem;color:var(--muted);max-width:30em}
+.dial{margin-top:30px;display:block;text-decoration:none}
+.dial small{display:block;color:var(--muted);font-weight:500;margin-bottom:4px}
+.dial .num{font-family:var(--head);font-weight:800;font-size:clamp(2rem,6.4vw,3.4rem);letter-spacing:-.03em;color:var(--berry);border-bottom:4px solid currentColor;display:inline-block;line-height:1.1}
+.hero .actions{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+
+.call{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 18px 40px -24px rgba(38,18,46,.35)}
+.call .bar{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:16px}
+.call .bar b{color:var(--ink);font-weight:600}
+.live{display:inline-flex;align-items:center;gap:6px}
+.live::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ok)}
+.msg{max-width:88%;padding:10px 14px;border-radius:18px;margin:0 0 10px;font-size:.98rem;line-height:1.45}
+.msg.ava{background:var(--bubble);border-bottom-left-radius:4px}
+.msg.you{background:var(--berry);color:var(--berry-ink);margin-left:auto;border-bottom-right-radius:4px}
+.confirm{margin-top:14px;background:var(--ok-bg);color:var(--ok);border-radius:14px;padding:12px 14px;font-weight:600;font-size:.95rem}
+.confirm span{display:block;font-weight:500;opacity:.9}
+
+section{padding:72px 0}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.lead{margin-top:14px;color:var(--muted);max-width:36em}
+.steps{margin:36px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:s}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;padding-top:16px;border-top:3px solid var(--berry)}
+.steps li::before{content:"Step " counter(s);display:block;color:var(--berry);font-weight:600;font-size:.9rem;margin-bottom:6px}
+.steps p{margin-top:8px;color:var(--muted)}
+
+.does{margin:32px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 40px}
+@media(max-width:700px){.does{grid-template-columns:1fr}}
+.does div{padding:14px 0;border-bottom:1px solid var(--line)}
+.does h3{font-size:1.05rem}
+.does p{color:var(--muted);margin-top:2px;font-size:1rem}
+
+.trial .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+@media(max-width:860px){.trial .wrap{grid-template-columns:1fr;gap:28px}}
+.trial ul{margin:20px 0 0;padding-left:1.1em;color:var(--muted)}
+.trial li{margin-bottom:6px}
+form{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:26px;display:grid;gap:14px}
+.alt form{background:var(--bg)}
+label{display:grid;gap:6px;font-weight:600;font-size:.95rem}
+input,select{font:400 1rem var(--body);color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+.alt input{background:var(--surface)}
+input:focus{border-color:var(--berry)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.row{grid-template-columns:1fr}}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.note{font-size:.88rem;color:var(--muted)}
+#status{font-weight:600;min-height:1.4em}
+#status.ok{color:var(--ok)} #status.err{color:var(--berry)}
+
+details{border-bottom:1px solid var(--line);padding:18px 0}
+details:first-of-type{border-top:1px solid var(--line);margin-top:28px}
+summary{cursor:pointer;font-family:var(--head);font-weight:700;font-size:1.15rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--berry);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{margin-top:10px;color:var(--muted);max-width:44em}
+
+footer{padding:36px 0 48px;color:var(--muted);font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer a{color:var(--ink)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Glow <span>&amp; Co</span> Salon</a>
+    <nav class="nav">
+      <a class="link" href="#how">How it works</a>
+      <a class="link" href="#faq">FAQ</a>
+      <a class="btn" href="#trial">Free trial</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Every Call To Your Salon Gets Answered.</h1>
+      <p class="sub">Ava is an AI receptionist that picks up when you are busy with a client. She books, reschedules and cancels appointments, day or night.</p>
+      <a class="dial" href="tel:+17126716096" aria-label="Call the demo line at plus 1, 7 1 2, 6 7 1, 6 0 9 6">
+        <small>Call the demo line and book a haircut</small>
+        <span class="num">+1 (712) 671-6096</span>
+      </a>
+      <div class="actions">
+        <a class="btn" href="#trial">Start my free 10-call trial</a>
+        <a class="btn ghost" href="#how">See how it works</a>
+      </div>
+    </div>
+
+    <div class="call" aria-label="Example call">
+      <div class="bar"><b>Incoming call</b><span class="live">Ava is on it</span></div>
+      <p class="msg ava">Thanks for calling Glow &amp; Co Salon, this is Ava. How can I help?</p>
+      <p class="msg you">Hi, can I get a haircut Saturday afternoon?</p>
+      <p class="msg ava">Of course. I have two thirty, three, or four. Which works best?</p>
+      <p class="msg you">Three, please.</p>
+      <p class="msg ava">Booked. See you Saturday at three.</p>
+      <div class="confirm">Appointment confirmed<span>Added to your schedule automatically</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="alt" id="how">
+  <div class="wrap">
+    <h2>A Missed Call Is A Missed Booking</h2>
+    <p class="lead">When you are mid-colour or closed for the night, callers usually move on to the next salon. Ava makes sure they book with you instead.</p>
+    <ol class="steps">
+      <li><h3>A Client Calls</h3><p>Ava answers in a warm, natural voice and asks what service and day they want.</p></li>
+      <li><h3>She Checks Your Schedule</h3><p>She only offers times that are really free, based on your stylists, hours and days off.</p></li>
+      <li><h3>The Booking Is Saved</h3><p>The appointment lands in your schedule and the caller gets a confirmation number.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What Ava Handles For You</h2>
+    <div class="does">
+      <div><h3>New Bookings</h3><p>Service, stylist, day and time, confirmed in one call.</p></div>
+      <div><h3>Reschedules And Cancellations</h3><p>Callers verify their name first, so only the right person can change a booking.</p></div>
+      <div><h3>Prices And Service Questions</h3><p>She reads from your own service list, so she never makes up a price.</p></div>
+      <div><h3>Hours, Address And Policies</h3><p>The questions you answer ten times a day, answered for you.</p></div>
+      <div><h3>Holidays And Stylist Time Off</h3><p>Closed days and vacations are respected automatically.</p></div>
+      <div><h3>Callback Requests</h3><p>For anything she cannot do, she takes a name and number for your team.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt trial" id="trial">
+  <div class="wrap">
+    <div>
+      <h2>Try Ava Free On Your First 10 Calls</h2>
+      <p class="lead">Tell me about your salon and I will set up Ava with your services, stylists and hours. I take on one pilot salon at a time, so spots are limited.</p>
+      <ul>
+        <li>Set up around your real service list and prices</li>
+        <li>See every booking Ava takes during your first 10 calls</li>
+        <li>No payment and no commitment, even after the trial</li>
+      </ul>
+    </div>
+
+    <!-- Replace YOUR_FORM_ID with your Formspree form ID (formspree.io) -->
+    <form id="trialForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="row">
+        <label>Salon name<input name="salon" required autocomplete="organization"></label>
+        <label>Your name<input name="name" required autocomplete="name"></label>
+      </div>
+      <div class="row">
+        <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      </div>
+      <div class="row">
+        <label>City and state<input name="city" required autocomplete="address-level2"></label>
+        <label>Number of stylists
+          <select name="stylists">
+            <option>1 to 2</option><option>3 to 5</option><option>6 to 10</option><option>More than 10</option>
+          </select>
+        </label>
+      </div>
+      <input class="hp" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Start my free trial</button>
+      <p id="status" role="status" aria-live="polite"></p>
+      <p class="note">I will only use these details to contact you about the trial.</p>
+    </form>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Questions Salon Owners Ask</h2>
+    <details><summary>Will callers know it is an AI?</summary><p>Ava sounds natural, but she is an AI assistant and will not pretend otherwise if asked. Most callers just want a quick booking and are happy to get one.</p></details>
+    <details><summary>How long does setup take?</summary><p>Once I have your services, prices, stylists and opening hours, setup is quick. You can test it yourself on the demo line before going live.</p></details>
+    <details><summary>Do I need to change my booking software?</summary><p>No. Ava keeps bookings in a simple schedule you can open and read. If you use another booking platform, tell me which one and we can talk about connecting it.</p></details>
+    <details><summary>What happens after the 10 free calls?</summary><p>If you like Ava, we agree on a simple monthly plan. If not, you pay nothing and we stop there.</p></details>
+    <details><summary>What does it cost?</summary><p>Your first 10 calls are free. After that, pricing depends on your salon size and call volume. Send the form above and I will share exact numbers.</p></details>
+    <details><summary>What if Ava cannot help with something?</summary><p>She takes the caller's name and number so your team can call back. She does not guess on prices, availability or policies.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Glow &amp; Co Salon. Built by <a href="https://bluemoonways.vercel.app/">Faheem Abbas</a>.</span>
+    <span>Demo line: <a href="tel:+17126716096">+1 (712) 671-6096</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form=document.getElementById('trialForm'),status=document.getElementById('status');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    status.className='';status.textContent='Sending...';
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){form.reset();status.className='ok';status.textContent='Thank you. I will contact you soon to set up your free trial.';}
+        else{throw new Error('bad');}
+      })
+      .catch(function(){status.className='err';status.textContent='Could not send. Please call +1 (712) 671-6096 or try again.';});
+  });
+})();
+</script>
+</body>
+</html>
