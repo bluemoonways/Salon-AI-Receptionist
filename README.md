@@ -91,10 +91,34 @@ If you like Ava, we agree on a simple monthly plan. If not, you pay nothing.
 2. Fill in the free-trial form on the website.
 3. Send me your service list, stylists and opening hours, and I will set Ava up for your salon.
 
-## Contact
+##  Author
 
-Built by **Faheem Abbas**: https://bluemoonways.vercel.app/
+**Faheem Abbas**
+
+ AI Automation Specialist | ⚙️ n8n Expert | 🧠 AI Agents | 🚀 AI-Powered Business Automation | 🎯 Lead Generation | 🔗 API Integrations | 📞 Calling Agents
+
+###  Contact
+
+For custom implementation or commercial use, please contact me:
+<br>
+
+<a href="https://wa.me/923002120566">
+  <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
+</a>
+
+<a href="https://www.linkedin.com/in/faheem-abbas-ai-automation-specialist/">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
+
+<a href="mailto:info.bluemoonways@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
+</a>
 
 ---
+
+## 🌐 Portfolio Link:
+https://bluemoonways.vercel.app/
+<br>
+
 
 *Developers: technical setup instructions are in [SETUP.md](SETUP.md).*
