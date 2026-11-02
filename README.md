@@ -90,6 +90,8 @@ If you like Ava, we agree on a simple monthly plan. If not, you pay nothing.
 1. Call the demo line and try a booking.
 2. Fill in the free-trial form on the website.
 3. Send me your service list, stylists and opening hours, and I will set Ava up for your salon.
+   
+*Developers: technical setup instructions are in [Setup File](SETUP.md).*
 
 ##  Author
 
