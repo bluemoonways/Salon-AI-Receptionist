@@ -1,4 +1,4 @@
-# Glow & Co Salon: AI Receptionist
+# 📞 Glow & Co Salon: AI Receptionist
 
 **Never miss a booking again.**
 
