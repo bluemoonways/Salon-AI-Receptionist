@@ -86,6 +86,17 @@ section{padding:72px 0}
 .does h3{font-size:1.05rem}
 .does p{color:var(--muted);margin-top:2px;font-size:1rem}
 
+/* Pricing Section Styles */
+.pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-top:40px}
+@media(max-width:760px){.pricing-grid{grid-template-columns:1fr}}
+.pricing-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:32px;display:flex;flex-direction:column;justify-content:space-between}
+.pricing-card h3{font-size:1.5rem;margin-bottom:8px}
+.price{font-family:var(--head);font-size:2.5rem;font-weight:800;color:var(--berry);margin:16px 0 24px}
+.price span{font-size:1rem;font-weight:500;color:var(--muted);font-family:var(--body)}
+.pricing-features{list-style:none;padding:0;margin:0 0 24px;color:var(--muted)}
+.pricing-features li{margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.pricing-features li::before{content:"✓";color:var(--berry);font-weight:bold}
+
 .trial .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
 @media(max-width:860px){.trial .wrap{grid-template-columns:1fr;gap:28px}}
 .trial ul{margin:20px 0 0;padding-left:1.1em;color:var(--muted)}
@@ -126,6 +137,7 @@ footer a{color:var(--ink)}
     <a class="brand" href="#top">Glow <span>&amp; Co</span> Salon</a>
     <nav class="nav">
       <a class="link" href="#how">How it works</a>
+      <a class="link" href="#pricing">Pricing</a>
       <a class="link" href="#faq">FAQ</a>
       <a class="btn" href="#trial">Free trial</a>
     </nav>
@@ -183,7 +195,48 @@ footer a{color:var(--ink)}
   </div>
 </section>
 
-<section class="alt trial" id="trial">
+<!-- Pricing Section Added -->
+<section class="alt" id="pricing">
+  <div class="wrap">
+    <h2>Simple, Transparent Pricing</h2>
+    <p class="lead">Choose how you want to pay for setup and management. Voice usage is billed separately by Vapi[cite: 2].</p>
+    
+    <div class="pricing-grid">
+      <!-- One-time plan -->
+      <div class="pricing-card">
+        <div>
+          <h3>One-time plan</h3>
+          <div class="price">$499 <span>one time</span></div>
+          <ul class="pricing-features">
+            <li>Full setup with your services, prices and hours</li>
+            <li>No monthly service fee</li>
+            <li><strong>Vapi account client ka hi hoga aur Vapi ka bill client pay karega</strong></li>
+            <li>Plus voice usage, billed at cost</li>
+          </ul>
+        </div>
+        <a class="btn" href="#trial">Get Started</a>
+      </div>
+
+      <!-- Monthly plan -->
+      <div class="pricing-card">
+        <div>
+          <h3>Monthly plan</h3>
+          <div class="price">$79 <span>/ month</span></div>
+          <p style="font-size: 0.9rem; color: var(--muted); margin-top: -16px; margin-bottom: 20px;">Plus a $199 one-time setup</p>
+          <ul class="pricing-features">
+            <li>Full setup with your services, prices and hours</li>
+            <li>Ongoing support and updates</li>
+            <li><strong>Vapi account client ka hi hoga aur Vapi ka bill client pay karega</strong></li>
+            <li>Plus voice usage, billed at cost</li>
+          </ul>
+        </div>
+        <a class="btn" href="#trial">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt trial" id="trial" style="background:var(--bg);">
   <div class="wrap">
     <div>
       <h2>See Ava Live, Free</h2>
