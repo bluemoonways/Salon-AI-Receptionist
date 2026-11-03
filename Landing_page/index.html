@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Glow &amp; Co Salon | AI receptionist that answers every call</title>
-<meta name="description" content="An AI receptionist for salons. It answers every call, books, reschedules and cancels appointments 24/7. Call +1 (712) 671-6096 to try it.">
+<meta name="description" content="An AI receptionist for salons. It answers every call, books, reschedules and cancels appointments 24/7. Request a free live demo.">
 <meta property="og:title" content="Glow &amp; Co Salon">
-<meta property="og:description" content="Never miss a salon booking again. Call the demo line and book a haircut with our AI receptionist.">
+<meta property="og:description" content="Never miss a salon booking again. Request a free live demo of our AI receptionist.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📞</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,7 +55,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:36px}}
 .hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800}
 .hero .sub{margin-top:20px;font-size:1.2rem;color:var(--muted);max-width:30em}
-.dial{margin-top:30px;display:block;text-decoration:none}
+.heronote{margin-top:22px;color:var(--ink);font-weight:500;max-width:30em}
 .dial small{display:block;color:var(--muted);font-weight:500;margin-bottom:4px}
 .dial .num{font-family:var(--head);font-weight:800;font-size:clamp(2rem,6.4vw,3.4rem);letter-spacing:-.03em;color:var(--berry);border-bottom:4px solid currentColor;display:inline-block;line-height:1.1}
 .hero .actions{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
@@ -136,12 +136,9 @@ footer a{color:var(--ink)}
     <div>
       <h1>Every Call To Your Salon Gets Answered.</h1>
       <p class="sub">Ava is an AI receptionist that picks up when you are busy with a client. She books, reschedules and cancels appointments, day or night.</p>
-      <a class="dial" href="tel:+17126716096" aria-label="Call the demo line at plus 1, 7 1 2, 6 7 1, 6 0 9 6">
-        <small>Call the demo line and book a haircut</small>
-        <span class="num">+1 (712) 671-6096</span>
-      </a>
+      <p class="heronote">Send a request and I will show you Ava live, taking a real booking call.</p>
       <div class="actions">
-        <a class="btn" href="#trial">Start my free 10-call trial</a>
+        <a class="btn" href="#trial">Request a free live demo</a>
         <a class="btn ghost" href="#how">See how it works</a>
       </div>
     </div>
@@ -187,17 +184,20 @@ footer a{color:var(--ink)}
 <section class="alt trial" id="trial">
   <div class="wrap">
     <div>
-      <h2>Try Ava Free On Your First 10 Calls</h2>
-      <p class="lead">Tell me about your salon and I will set up Ava with your services, stylists and hours. I take on one pilot salon at a time, so spots are limited.</p>
+      <h2>See Ava Live, Free</h2>
+      <p class="lead">Send the form and I will contact you to arrange a live demo. You will hear Ava handle a real booking call, using a sample salon.</p>
       <ul>
-        <li>Set up around your real service list and prices</li>
-        <li>See every booking Ava takes during your first 10 calls</li>
-        <li>No payment and no commitment, even after the trial</li>
+        <li>A live demo, no payment needed</li>
+        <li>If you like it, Ava is set up with your own salon name, services, prices and hours</li>
+        <li>No commitment after the demo</li>
       </ul>
     </div>
 
-    <!-- Replace YOUR_FORM_ID with your Formspree form ID (formspree.io) -->
-    <form id="trialForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <!-- Form is handled by Web3Forms (web3forms.com). The access key is public and safe in client-side code. -->
+    <form id="trialForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="8ef73f3c-450d-4cee-90fc-491192c833e9">
+      <input type="hidden" name="subject" value="New Ava demo request">
+      <input type="hidden" name="from_name" value="Ava demo page">
       <div class="row">
         <label>Salon name<input name="salon" required autocomplete="organization"></label>
         <label>Your name<input name="name" required autocomplete="name"></label>
@@ -214,10 +214,18 @@ footer a{color:var(--ink)}
           </select>
         </label>
       </div>
-      <input class="hp" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button class="btn" type="submit">Start my free trial</button>
+      <div class="row">
+        <label>Best way to reach you
+          <select name="contact_method">
+            <option>Phone call</option><option>Email</option>
+          </select>
+        </label>
+        <label>Best time to reach you (optional)<input name="best_time" placeholder="e.g. weekdays after 2pm"></label>
+      </div>
+      <input type="checkbox" class="hp" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Request my free demo</button>
       <p id="status" role="status" aria-live="polite"></p>
-      <p class="note">I will only use these details to contact you about the trial.</p>
+      <p class="note">I am available any time of day, so choose whatever suits you. I will only use these details to contact you about your demo.</p>
     </form>
   </div>
 </section>
@@ -226,7 +234,7 @@ footer a{color:var(--ink)}
   <div class="wrap">
     <h2>Questions Salon Owners Ask</h2>
     <details><summary>Will callers know it is an AI?</summary><p>Ava sounds natural, but she is an AI assistant and will not pretend otherwise if asked. Most callers just want a quick booking and are happy to get one.</p></details>
-    <details><summary>How long does setup take?</summary><p>Once I have your services, prices, stylists and opening hours, setup is quick. You can test it yourself on the demo line before going live.</p></details>
+    <details><summary>How long does setup take?</summary><p>Once I have your services, prices, stylists and opening hours, setup is quick. You will see a live demo first, so you know what to expect before going live.</p></details>
     <details><summary>Do I need to change my booking software?</summary><p>No. Ava keeps bookings in a simple schedule you can open and read. If you use another booking platform, tell me which one and we can talk about connecting it.</p></details>
     <details><summary>What happens after the 10 free calls?</summary><p>If you like Ava, we agree on a simple monthly plan. If not, you pay nothing and we stop there.</p></details>
     <details><summary>What does it cost?</summary><p>Your first 10 calls are free. After that, pricing depends on your salon size and call volume. Send the form above and I will share exact numbers.</p></details>
@@ -238,7 +246,6 @@ footer a{color:var(--ink)}
 <footer>
   <div class="wrap">
     <span>&copy; 2026 Glow &amp; Co Salon. Built by <a href="https://bluemoonways.vercel.app/">Faheem Abbas</a>.</span>
-    <span>Demo line: <a href="tel:+17126716096">+1 (712) 671-6096</a></span>
   </div>
 </footer>
 
@@ -250,10 +257,10 @@ footer a{color:var(--ink)}
     status.className='';status.textContent='Sending...';
     fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
       .then(function(r){
-        if(r.ok){form.reset();status.className='ok';status.textContent='Thank you. I will contact you soon to set up your free trial.';}
+        if(r.ok){var n=(form.elements['name'].value||'').trim(),sl=(form.elements['salon'].value||'').trim();form.reset();status.className='ok';status.textContent='Thank you'+(n?', '+n:'')+'. Your request'+(sl?' for '+sl:'')+' is in. I will contact you soon to arrange your live demo.';}
         else{throw new Error('bad');}
       })
-      .catch(function(){status.className='err';status.textContent='Could not send. Please call +1 (712) 671-6096 or try again.';});
+      .catch(function(){status.className='err';status.textContent='Could not send. Please check your details and try again.';});
   });
 })();
 </script>
