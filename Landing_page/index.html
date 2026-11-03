@@ -101,7 +101,9 @@ input:focus{border-color:var(--berry)}
 .hp{position:absolute;left:-9999px;height:0;overflow:hidden}
 .note{font-size:.88rem;color:var(--muted)}
 #status{font-weight:600;min-height:1.4em}
-#status.ok{color:var(--ok)} #status.err{color:var(--berry)}
+#status.ok,#status.err{padding:14px 16px;border-radius:14px;font-size:1.05rem;line-height:1.4}
+#status.ok{background:var(--ok-bg);color:var(--ok)}
+#status.err{background:var(--bubble);color:var(--berry)}
 
 details{border-bottom:1px solid var(--line);padding:18px 0}
 details:first-of-type{border-top:1px solid var(--line);margin-top:28px}
@@ -257,7 +259,7 @@ footer a{color:var(--ink)}
     status.className='';status.textContent='Sending...';
     fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
       .then(function(r){
-        if(r.ok){var n=(form.elements['name'].value||'').trim(),sl=(form.elements['salon'].value||'').trim();form.reset();status.className='ok';status.textContent='Thank you'+(n?', '+n:'')+'. Your request'+(sl?' for '+sl:'')+' is in. I will contact you soon to arrange your live demo.';}
+        if(r.ok){var n=(form.elements['name'].value||'').trim();form.reset();status.className='ok';status.textContent='\u2713 Thank you'+(n?', '+n:'')+'! Your request is received. I will contact you soon.';status.scrollIntoView({behavior:'smooth',block:'center'});}
         else{throw new Error('bad');}
       })
       .catch(function(){status.className='err';status.textContent='Could not send. Please check your details and try again.';});
