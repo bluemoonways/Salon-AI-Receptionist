@@ -94,8 +94,9 @@ section{padding:72px 0}
 .price{font-family:var(--head);font-size:2.5rem;font-weight:800;color:var(--berry);margin:16px 0 24px}
 .price span{font-size:1rem;font-weight:500;color:var(--muted);font-family:var(--body)}
 .pricing-features{list-style:none;padding:0;margin:0 0 24px;color:var(--muted)}
-.pricing-features li{margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.pricing-features li{margin-bottom:12px;display:flex;align-items:flex-start;gap:10px}
 .pricing-features li::before{content:"✓";color:var(--berry);font-weight:bold}
+.vapi-note{margin-top:32px;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:20px;font-size:0.95rem;color:var(--muted)}
 
 .trial .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
 @media(max-width:860px){.trial .wrap{grid-template-columns:1fr;gap:28px}}
@@ -195,11 +196,11 @@ footer a{color:var(--ink)}
   </div>
 </section>
 
-<!-- Pricing Section Added -->
+<!-- Updated Pricing Section -->
 <section class="alt" id="pricing">
   <div class="wrap">
     <h2>Simple, Transparent Pricing</h2>
-    <p class="lead">Choose how you want to pay for setup and management. Voice usage is billed separately by Vapi[cite: 2].</p>
+    <p class="lead">Choose how you want to pay for setup and management. Voice usage is billed separately.</p>
     
     <div class="pricing-grid">
       <!-- One-time plan -->
@@ -209,9 +210,8 @@ footer a{color:var(--ink)}
           <div class="price">$499 <span>one time</span></div>
           <ul class="pricing-features">
             <li>Full setup with your services, prices and hours</li>
-            <li>No monthly service fee</li>
-            <li><strong>Vapi account client ka hi hoga aur Vapi ka bill client pay karega</strong></li>
-            <li>Plus voice usage, billed at cost</li>
+            <li>Pay once, no ongoing service fee</li>
+            <li>Client pays Vapi usage bill at actual cost</li>
           </ul>
         </div>
         <a class="btn" href="#trial">Get Started</a>
@@ -225,18 +225,22 @@ footer a{color:var(--ink)}
           <p style="font-size: 0.9rem; color: var(--muted); margin-top: -16px; margin-bottom: 20px;">Plus a $199 one-time setup</p>
           <ul class="pricing-features">
             <li>Full setup with your services, prices and hours</li>
-            <li>Ongoing support and updates</li>
-            <li><strong>Vapi account client ka hi hoga aur Vapi ka bill client pay karega</strong></li>
-            <li>Plus voice usage, billed at cost</li>
+            <li>Ongoing support and prompt updates</li>
+            <li>Client pays Vapi usage bill at actual cost</li>
           </ul>
         </div>
         <a class="btn" href="#trial">Get Started</a>
       </div>
     </div>
+
+    <div class="vapi-note">
+      <strong>Voice Usage (Same on both plans):</strong><br>
+      Estimated at <strong>$0.08 to $0.13 per minute</strong>. The client will pay Vapi directly at actual cost with no extra markup from me. A typical small salon running ~300 minutes per month pays around $25 to $40 directly to Vapi. Check <a href="https://vapi.ai/pricing" target="_blank" rel="noopener">Vapi's official pricing page</a> for current rates.
+    </div>
   </div>
 </section>
 
-<section class="alt trial" id="trial" style="background:var(--bg);">
+<section class="trial" id="trial">
   <div class="wrap">
     <div>
       <h2>See Ava Live, Free</h2>
