@@ -3,10 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Glow &amp; Co Salon | AI receptionist that answers every call</title>
-<meta name="description" content="An AI receptionist for salons. It answers every call, books, reschedules and cancels appointments 24/7. Request a free live demo.">
-<meta property="og:title" content="Glow &amp; Co Salon">
-<meta property="og:description" content="Never miss a salon booking again. Request a free live demo of our AI receptionist.">
+<title>Glow &amp; Co Salon | AI Receptionist</title>
+<meta name="description" content="An AI receptionist for salons. It answers every call, books, reschedules and cancels appointments 24/7.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📞</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +13,8 @@
 :root{
   --bg:#faf5f8; --surface:#ffffff; --ink:#26122e; --muted:#6b5a72; --line:#e6d9e4;
   --berry:#b4236b; --berry-ink:#ffffff; --ok:#17695f; --ok-bg:#dff3ee; --bubble:#f1e6ee;
-  --head:'Bricolage Grotesque','Trebuchet MS',system-ui,sans-serif;
-  --body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --head:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'Instrument Sans',system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
@@ -24,24 +22,20 @@
     --berry:#ff6fae; --berry-ink:#2a0a1a; --ok:#7fe0cf; --ok-bg:#16332f; --bubble:#33213f;
   }
 }
-:root[data-theme="dark"]{
-  --bg:#1a0f20; --surface:#251630; --ink:#f6ecf4; --muted:#bba9c2; --line:#3b2748;
-  --berry:#ff6fae; --berry-ink:#2a0a1a; --ok:#7fe0cf; --ok-bg:#16332f; --bubble:#33213f;
-}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body);-webkit-font-smoothing:antialiased}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--berry);outline-offset:3px;border-radius:4px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-h1,h2,h3{font-family:var(--head);line-height:1.05;margin:0;letter-spacing:-.02em}
-h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700}
-h3{font-size:1.2rem;font-weight:700;letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:700}
+h3{font-size:1.1rem;font-weight:700}
 p{margin:0}
 
 header{padding:20px 0}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{font-family:var(--head);font-weight:800;font-size:1.15rem;text-decoration:none;letter-spacing:-.02em}
+.brand{font-family:var(--head);font-weight:800;font-size:1.15rem;text-decoration:none}
 .brand span{color:var(--berry)}
 .nav a.link{margin-right:18px;text-decoration:none;color:var(--muted);font-weight:500}
 .nav a.link:hover{color:var(--ink)}
@@ -50,15 +44,13 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .btn:hover{filter:brightness(1.08)}
 .btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
 
-.hero{padding:40px 0 72px}
+.hero{padding:40px 0 64px}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
 @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:36px}}
-.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800}
-.hero .sub{margin-top:20px;font-size:1.2rem;color:var(--muted);max-width:30em}
-.heronote{margin-top:22px;color:var(--ink);font-weight:500;max-width:30em}
-.dial small{display:block;color:var(--muted);font-weight:500;margin-bottom:4px}
-.dial .num{font-family:var(--head);font-weight:800;font-size:clamp(2rem,6.4vw,3.4rem);letter-spacing:-.03em;color:var(--berry);border-bottom:4px solid currentColor;display:inline-block;line-height:1.1}
-.hero .actions{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800}
+.hero .sub{margin-top:16px;font-size:1.15rem;color:var(--muted);max-width:30em}
+.heronote{margin-top:18px;color:var(--ink);font-weight:500}
+.hero .actions{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
 
 .call{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 18px 40px -24px rgba(38,18,46,.35)}
 .call .bar{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:16px}
@@ -71,62 +63,60 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .confirm{margin-top:14px;background:var(--ok-bg);color:var(--ok);border-radius:14px;padding:12px 14px;font-weight:600;font-size:.95rem}
 .confirm span{display:block;font-weight:500;opacity:.9}
 
-section{padding:72px 0}
+section{padding:64px 0}
 .alt{background:var(--surface);border-block:1px solid var(--line)}
-.lead{margin-top:14px;color:var(--muted);max-width:36em}
-.steps{margin:36px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:s}
+.lead{margin-top:12px;color:var(--muted);max-width:36em}
+
+.steps{margin:32px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
 @media(max-width:760px){.steps{grid-template-columns:1fr}}
-.steps li{counter-increment:s;padding-top:16px;border-top:3px solid var(--berry)}
-.steps li::before{content:"Step " counter(s);display:block;color:var(--berry);font-weight:600;font-size:.9rem;margin-bottom:6px}
-.steps p{margin-top:8px;color:var(--muted)}
+.steps li{counter-increment:s;padding-top:14px;border-top:3px solid var(--berry)}
+.steps li::before{content:"Step " counter(s);display:block;color:var(--berry);font-weight:600;font-size:.85rem;margin-bottom:4px}
+.steps p{margin-top:6px;color:var(--muted);font-size:.95rem}
 
-.does{margin:32px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 40px}
+.does{margin:32px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px 36px}
 @media(max-width:700px){.does{grid-template-columns:1fr}}
-.does div{padding:14px 0;border-bottom:1px solid var(--line)}
-.does h3{font-size:1.05rem}
-.does p{color:var(--muted);margin-top:2px;font-size:1rem}
+.does div{padding:12px 0;border-bottom:1px solid var(--line)}
+.does p{color:var(--muted);margin-top:2px;font-size:.95rem}
 
-/* Pricing Section Styles */
-.pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-top:40px}
+.pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:32px}
 @media(max-width:760px){.pricing-grid{grid-template-columns:1fr}}
-.pricing-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:32px;display:flex;flex-direction:column;justify-content:space-between}
-.pricing-card h3{font-size:1.5rem;margin-bottom:8px}
-.price{font-family:var(--head);font-size:2.5rem;font-weight:800;color:var(--berry);margin:16px 0 24px}
-.price span{font-size:1rem;font-weight:500;color:var(--muted);font-family:var(--body)}
-.pricing-features{list-style:none;padding:0;margin:0 0 24px;color:var(--muted)}
-.pricing-features li{margin-bottom:12px;display:flex;align-items:flex-start;gap:10px}
+.pricing-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;justify-content:space-between}
+.price{font-family:var(--head);font-size:2.4rem;font-weight:800;color:var(--berry);margin:14px 0 20px}
+.price span{font-size:.95rem;font-weight:500;color:var(--muted);font-family:var(--body)}
+.pricing-features{list-style:none;padding:0;margin:0 0 20px;color:var(--muted);font-size:.95rem}
+.pricing-features li{margin-bottom:10px;display:flex;align-items:flex-start;gap:8px}
 .pricing-features li::before{content:"✓";color:var(--berry);font-weight:bold}
-.vapi-note{margin-top:32px;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:20px;font-size:0.95rem;color:var(--muted)}
+.vapi-note{margin-top:24px;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:18px;font-size:.92rem;color:var(--muted)}
 
-.trial .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
-@media(max-width:860px){.trial .wrap{grid-template-columns:1fr;gap:28px}}
-.trial ul{margin:20px 0 0;padding-left:1.1em;color:var(--muted)}
+.trial .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+@media(max-width:860px){.trial .wrap{grid-template-columns:1fr;gap:24px}}
+.trial ul{margin:16px 0 0;padding-left:1.1em;color:var(--muted);font-size:.95rem}
 .trial li{margin-bottom:6px}
-form{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:26px;display:grid;gap:14px}
+
+form{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px;display:grid;gap:12px}
 .alt form{background:var(--bg)}
-label{display:grid;gap:6px;font-weight:600;font-size:.95rem}
-input,select{font:400 1rem var(--body);color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+label{display:grid;gap:5px;font-weight:600;font-size:.9rem}
+input,select{font:400 1rem var(--body);color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;width:100%}
 .alt input{background:var(--surface)}
 input:focus{border-color:var(--berry)}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:520px){.row{grid-template-columns:1fr}}
 .hp{position:absolute;left:-9999px;height:0;overflow:hidden}
-.note{font-size:.88rem;color:var(--muted)}
+.note{font-size:.85rem;color:var(--muted)}
 #status{font-weight:600;min-height:1.4em}
-#status.ok,#status.err{padding:14px 16px;border-radius:14px;font-size:1.05rem;line-height:1.4}
+#status.ok,#status.err{padding:12px 14px;border-radius:12px;font-size:1rem}
 #status.ok{background:var(--ok-bg);color:var(--ok)}
 #status.err{background:var(--bubble);color:var(--berry)}
 
-details{border-bottom:1px solid var(--line);padding:18px 0}
-details:first-of-type{border-top:1px solid var(--line);margin-top:28px}
-summary{cursor:pointer;font-family:var(--head);font-weight:700;font-size:1.15rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details:first-of-type{border-top:1px solid var(--line);margin-top:24px}
+summary{cursor:pointer;font-family:var(--head);font-weight:700;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--berry);font-size:1.4rem;line-height:1}
+summary::after{content:"+";color:var(--berry);font-size:1.3rem;line-height:1}
 details[open] summary::after{content:"\2212"}
-details p{margin-top:10px;color:var(--muted);max-width:44em}
+details p{margin-top:8px;color:var(--muted);font-size:.95rem;max-width:44em}
 
-footer{padding:36px 0 48px;color:var(--muted);font-size:.95rem}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer{padding:32px 0 40px;color:var(--muted);font-size:.9rem}
 footer a{color:var(--ink)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -151,10 +141,10 @@ footer a{color:var(--ink)}
     <div>
       <h1>Every Call To Your Salon Gets Answered.</h1>
       <p class="sub">Ava is an AI receptionist that picks up when you are busy with a client. She books, reschedules and cancels appointments, day or night.</p>
-      <p class="heronote">Send a request and I will show you Ava live, taking a real booking call.</p>
+      <p class="heronote">Send a request to test Ava live on a real booking call.</p>
       <div class="actions">
-        <a class="btn" href="#trial">Request a free live demo</a>
-        <a class="btn ghost" href="#how">See how it works</a>
+        <a class="btn" href="#trial">Request Live Demo</a>
+        <a class="btn ghost" href="#how">See How It Works</a>
       </div>
     </div>
 
@@ -172,61 +162,58 @@ footer a{color:var(--ink)}
 
 <section class="alt" id="how">
   <div class="wrap">
-    <h2>A Missed Call Is A Missed Booking</h2>
-    <p class="lead">When you are mid-colour or closed for the night, callers usually move on to the next salon. Ava makes sure they book with you instead.</p>
+    <h2>Never Miss a Booking Again</h2>
+    <p class="lead">When you are busy or closed, callers usually move on to the next salon. Ava ensures they book with you instead.</p>
     <ol class="steps">
-      <li><h3>A Client Calls</h3><p>Ava answers in a warm, natural voice and asks what service and day they want.</p></li>
-      <li><h3>She Checks Your Schedule</h3><p>She only offers times that are really free, based on your stylists, hours and days off.</p></li>
-      <li><h3>The Booking Is Saved</h3><p>The appointment lands in your schedule and the caller gets a confirmation number.</p></li>
+      <li><h3>Ava Answers Instantly</h3><p>Greets callers in a warm, natural voice and notes their requested service and day.</p></li>
+      <li><h3>Checks Schedule</h3><p>Offers only available times based on your stylists, hours, and days off.</p></li>
+      <li><h3>Secures Booking</h3><p>Saves the appointment directly to your schedule and confirms with the caller.</p></li>
     </ol>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>What Ava Handles For You</h2>
+    <h2>What Ava Handles</h2>
     <div class="does">
-      <div><h3>New Bookings</h3><p>Service, stylist, day and time, confirmed in one call.</p></div>
-      <div><h3>Reschedules And Cancellations</h3><p>Callers verify their name first, so only the right person can change a booking.</p></div>
-      <div><h3>Prices And Service Questions</h3><p>She reads from your own service list, so she never makes up a price.</p></div>
-      <div><h3>Hours, Address And Policies</h3><p>The questions you answer ten times a day, answered for you.</p></div>
-      <div><h3>Holidays And Stylist Time Off</h3><p>Closed days and vacations are respected automatically.</p></div>
-      <div><h3>Callback Requests</h3><p>For anything she cannot do, she takes a name and number for your team.</p></div>
+      <div><h3>New Bookings</h3><p>Service, stylist, day and time, confirmed seamlessly.</p></div>
+      <div><h3>Changes &amp; Cancellations</h3><p>Verified via client details to ensure secure updates.</p></div>
+      <div><h3>Pricing &amp; Services</h3><p>Reads strictly from your service list with zero guesswork.</p></div>
+      <div><h3>Hours &amp; Policies</h3><p>Instantly answers routine questions about location and rules.</p></div>
+      <div><h3>Time Off Management</h3><p>Automatically respects holidays and stylist vacations.</p></div>
+      <div><h3>Callback Requests</h3><p>Takes details for complex queries so your team can follow up.</p></div>
     </div>
   </div>
 </section>
 
-<!-- Updated Pricing Section -->
 <section class="alt" id="pricing">
   <div class="wrap">
-    <h2>Simple, Transparent Pricing</h2>
-    <p class="lead">Choose how you want to pay for setup and management. Voice usage is billed separately.</p>
+    <h2>Simple Pricing</h2>
+    <p class="lead">Choose a payment structure that fits your salon. Voice usage is billed separately at cost.</p>
     
     <div class="pricing-grid">
-      <!-- One-time plan -->
       <div class="pricing-card">
         <div>
-          <h3>One-time plan</h3>
-          <div class="price">$499 <span>one time</span></div>
+          <h3>One-Time Plan</h3>
+          <div class="price">$499 <span>one-time</span></div>
           <ul class="pricing-features">
-            <li>Full setup with your services, prices and hours</li>
-            <li>Pay once, no ongoing service fee</li>
-            <li>Client pays Vapi usage bill at actual cost</li>
+            <li>Complete setup with your services and hours</li>
+            <li>No ongoing monthly software fees</li>
+            <li>Direct Vapi usage billing at actual cost</li>
           </ul>
         </div>
         <a class="btn" href="#trial">Get Started</a>
       </div>
 
-      <!-- Monthly plan -->
       <div class="pricing-card">
         <div>
-          <h3>Monthly plan</h3>
+          <h3>Monthly Plan</h3>
           <div class="price">$79 <span>/ month</span></div>
-          <p style="font-size: 0.9rem; color: var(--muted); margin-top: -16px; margin-bottom: 20px;">Plus a $199 one-time setup</p>
+          <p style="font-size: 0.88rem; color: var(--muted); margin-top: -12px; margin-bottom: 16px;">Plus a $199 one-time setup fee</p>
           <ul class="pricing-features">
-            <li>Full setup with your services, prices and hours</li>
-            <li>Ongoing support and prompt updates</li>
-            <li>Client pays Vapi usage bill at actual cost</li>
+            <li>Complete setup with your services and hours</li>
+            <li>Continuous support and prompt updates</li>
+            <li>Direct Vapi usage billing at actual cost</li>
           </ul>
         </div>
         <a class="btn" href="#trial">Get Started</a>
@@ -234,8 +221,7 @@ footer a{color:var(--ink)}
     </div>
 
     <div class="vapi-note">
-      <strong>Voice Usage (Same on both plans):</strong><br>
-      Estimated at <strong>$0.08 to $0.13 per minute</strong>. The client will pay Vapi directly at actual cost with no extra markup from me. A typical small salon running ~300 minutes per month pays around $25 to $40 directly to Vapi. Check <a href="https://vapi.ai/pricing" target="_blank" rel="noopener">Vapi's official pricing page</a> for current rates.
+      <strong>Voice Usage Note:</strong> Estimated at <strong>$0.08 to $0.13 per minute</strong> via Vapi directly with zero markup. A typical salon running ~300 minutes monthly pays around $25–$40. Check <a href="https://vapi.ai/pricing" target="_blank" rel="noopener">Vapi Pricing</a> for current updates.
     </div>
   </div>
 </section>
@@ -243,61 +229,60 @@ footer a{color:var(--ink)}
 <section class="trial" id="trial">
   <div class="wrap">
     <div>
-      <h2>See Ava Live, Free</h2>
-      <p class="lead">Send the form and I will contact you to arrange a live demo. You will hear Ava handle a real booking call, using a sample salon.</p>
+      <h2>Experience Ava Live</h2>
+      <p class="lead">Submit the form to schedule a live demo. You will hear Ava handle a sample salon booking call in real-time.</p>
       <ul>
-        <li>A live demo, no payment needed</li>
-        <li>If you like it, Ava is set up with your own salon name, services, prices and hours</li>
-        <li>No commitment after the demo</li>
+        <li>Completely free live demonstration</li>
+        <li>Customized setup preview with your salon details</li>
+        <li>Zero commitment required</li>
       </ul>
     </div>
 
-    <!-- Form is handled by Web3Forms (web3forms.com). The access key is public and safe in client-side code. -->
     <form id="trialForm" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="8ef73f3c-450d-4cee-90fc-491192c833e9">
       <input type="hidden" name="subject" value="New salon live demo request">
       <input type="hidden" name="from_name" value="Salon AI Receptionist">
       <div class="row">
-        <label>Salon name<input name="salon" required autocomplete="organization"></label>
-        <label>Your name<input name="name" required autocomplete="name"></label>
+        <label>Salon Name<input name="salon" required autocomplete="organization"></label>
+        <label>Your Name<input name="name" required autocomplete="name"></label>
       </div>
       <div class="row">
         <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
         <label>Email<input name="email" type="email" required autocomplete="email"></label>
       </div>
       <div class="row">
-        <label>City and state<input name="city" required autocomplete="address-level2"></label>
-        <label>Number of stylists
+        <label>City &amp; State<input name="city" required autocomplete="address-level2"></label>
+        <label>Number of Stylists
           <select name="stylists">
             <option>1 to 2</option><option>3 to 5</option><option>6 to 10</option><option>More than 10</option>
           </select>
         </label>
       </div>
       <div class="row">
-        <label>Best way to reach you
+        <label>Preferred Contact
           <select name="contact_method">
             <option>Phone call</option><option>Email</option>
           </select>
         </label>
-        <label>Best time to reach you (optional)<input name="best_time" placeholder="e.g. weekdays after 2pm"></label>
+        <label>Best Time (Optional)<input name="best_time" placeholder="e.g. weekdays after 2pm"></label>
       </div>
       <input type="checkbox" class="hp" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button class="btn" type="submit">Request my free demo</button>
+      <button class="btn" type="submit">Request Free Demo</button>
       <p id="status" role="status" aria-live="polite"></p>
-      <p class="note">I am available any time of day, so choose whatever suits you. I will only use these details to contact you about your demo.</p>
+      <p class="note">Your details will only be used to arrange your requested demo.</p>
     </form>
   </div>
 </section>
 
 <section id="faq">
   <div class="wrap">
-    <h2>Questions Salon Owners Ask</h2>
-    <details><summary>Will callers know it is an AI?</summary><p>Ava sounds natural, but she is an AI assistant and will not pretend otherwise if asked. Most callers just want a quick booking and are happy to get one.</p></details>
-    <details><summary>How long does setup take?</summary><p>Once I have your services, prices, stylists and opening hours, setup is quick. You will see a live demo first, so you know what to expect before going live.</p></details>
-    <details><summary>Do I need to change my booking software?</summary><p>No. Ava keeps bookings in a simple schedule you can open and read. If you use another booking platform, tell me which one and we can talk about connecting it.</p></details>
-    <details><summary>What happens after the 10 free calls?</summary><p>If you like Ava, we agree on a simple monthly plan. If not, you pay nothing and we stop there.</p></details>
-    <details><summary>What does it cost?</summary><p>Your first 10 calls are free. After that, pricing depends on your salon size and call volume. Send the form above and I will share exact numbers.</p></details>
-    <details><summary>What if Ava cannot help with something?</summary><p>She takes the caller's name and number so your team can call back. She does not guess on prices, availability or policies.</p></details>
+    <h2>Frequently Asked Questions</h2>
+    <details><summary>Will callers know it is an AI?</summary><p>Ava sounds completely natural, but if asked, she acknowledges she is an AI assistant. Most callers appreciate the fast response and booking confirmation.</p></details>
+    <details><summary>How fast is setup?</summary><p>Once you provide your menu, pricing, and hours, deployment is fast. You will review a live demo first to ensure everything meets your standards.</p></details>
+    <details><summary>Does it integrate with my software?</summary><p>Ava maintains a clean, accessible schedule ledger. If you use a specific third-party booking tool, let us know to explore custom integration options.</p></details>
+    <details><summary>What happens after the free trial?</summary><p>If you love how Ava performs, we transition to your chosen plan. If not, there is no cost or obligation to continue.</p></details>
+    <details><summary>How are calls charged?</summary><p>Pricing scales cleanly based on your volume and plan. Submit the demo form for exact breakdowns tailored to your salon size.</p></details>
+    <details><summary>What if a request is too complex?</summary><p>For any request outside her scope, Ava logs the caller's details and message so your team can follow up directly.</p></details>
   </div>
 </section>
 </main>
