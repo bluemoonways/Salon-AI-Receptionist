@@ -52,6 +52,11 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .heronote{margin-top:18px;color:var(--ink);font-weight:500}
 .hero .actions{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
 
+.video-wrap{max-width:820px;margin:28px auto 0;aspect-ratio:16/9;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 18px 40px -24px rgba(38,18,46,.35)}
+.video-wrap iframe{width:100%;height:100%;border:0;display:block}
+#demo .wrap{text-align:center}
+#demo .lead{margin-left:auto;margin-right:auto}
+
 .call{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 18px 40px -24px rgba(38,18,46,.35)}
 .call .bar{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:16px}
 .call .bar b{color:var(--ink);font-weight:600}
@@ -127,6 +132,7 @@ footer a{color:var(--ink)}
   <div class="wrap">
     <a class="brand" href="#top">Glow <span>&amp; Co</span> Salon</a>
     <nav class="nav">
+      <a class="link" href="#demo">Demo</a>
       <a class="link" href="#how">How it works</a>
       <a class="link" href="#pricing">Pricing</a>
       <a class="link" href="#faq">FAQ</a>
@@ -141,10 +147,10 @@ footer a{color:var(--ink)}
     <div>
       <h1>Every Call To Your Salon Gets Answered.</h1>
       <p class="sub">Ava is an AI receptionist that picks up when you are busy with a client. She books, reschedules and cancels appointments, day or night.</p>
-      <p class="heronote">Send a request to test Ava live on a real booking call.</p>
+      <p class="heronote">Watch Ava handle a real booking call, or request a live test on your own salon.</p>
       <div class="actions">
         <a class="btn" href="#trial">Request Live Demo</a>
-        <a class="btn ghost" href="#how">See How It Works</a>
+        <a class="btn ghost" href="#demo">Watch 2-Min Demo</a>
       </div>
     </div>
 
@@ -159,6 +165,18 @@ footer a{color:var(--ink)}
     </div>
   </div>
 </div>
+
+<section id="demo">
+  <div class="wrap">
+    <h2>Hear Ava In Action</h2>
+    <p class="lead">Watch Ava handle a real booking call from start to finish.</p>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube-nocookie.com/embed/q3cFysgVUJk"
+        title="Ava AI receptionist live demo" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
 
 <section class="alt" id="how">
   <div class="wrap">
