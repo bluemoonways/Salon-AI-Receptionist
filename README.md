@@ -1,126 +1,87 @@
-# 📞 Glow & Co Salon: AI Receptionist
+# 💇‍♀️ Glow & Co. Salon — AI Phone & Web Receptionist
 
-**Never miss a booking again.**
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://bluemoonways-ai-salon.vercel.app/)
+[![Vapi AI](https://img.shields.io/badge/Voice%20AI-Vapi.ai-purple?style=for-the-badge)](https://vapi.ai)
+[![Google Apps Script](https://img.shields.io/badge/Backend-Google%20Apps%20Script-green?style=for-the-badge&logo=google)](https://script.google.com)
 
-Ava is an AI receptionist that answers your salon's phone calls, 24 hours a day. She books, reschedules and cancels appointments, and answers the questions you get asked every day, even when your whole team is busy with clients.
+An intelligent, end-to-end **AI Phone Receptionist & Web Voice Assistant** designed for beauty salons, barber shops, and spas. It handles incoming voice calls and web-based voice interactions 24/7—booking appointments, checking real-time availability, answering service FAQs, and triggering confirmation messages automatically.
 
-## Try it yourself
-
-Call the demo line and book a haircut:
-
-**+1 (712) 671-6096**
-
-## Why a salon needs this
-
-When you are in the middle of a colour or the salon is closed, callers rarely leave a message. They call the next salon instead. Ava picks up every call, so those bookings stay with you.
-
-## How it works
-
-1. **A client calls.** Ava answers in a warm, natural voice and asks which service and day they want.
-2. **She checks your schedule.** She only offers times that are really free, based on your stylists, working hours and days off.
-3. **The booking is saved.** The appointment appears in your schedule and the caller gets a confirmation number.
-
-## What Ava can do
-
-- **Book appointments.** Service, stylist, day and time, all in one call.
-- **Reschedule or cancel.** The caller must give the name on the booking first, so nobody else can change it.
-- **Answer questions about services and prices.** She reads from your own list, so she never makes up a price.
-- **Share your address, opening hours and policies.**
-- **Respect holidays and time off.** Closed days and stylist vacations are blocked automatically.
-- **Take a message.** If she cannot help with something (a complaint, a refund, a custom quote), she takes the caller's name and number so your team can call back.
-
-## An example call
-
-> **Ava:** Thanks for calling Glow & Co Salon, this is Ava. How can I help?
-
-> **Caller:** Hi, can I get a haircut Saturday afternoon?
-
-> **Ava:** Of course. I have two thirty, three, or four. Which works best?
-
-> **Caller:** Three, please.
-
-> **Ava:** Booked. See you Saturday at three.
-
-## You stay in control
-
-Everything Ava knows lives in a simple Google Sheet that you can open and edit like any spreadsheet:
-
-| What you can change | Examples |
-|---|---|
-| Services and prices | Add a new service, change a price or how long it takes |
-| Stylists | Working hours, days off, lunch breaks, which services each one does |
-| Salon details | Address, phone number, opening hours, policies |
-| Holidays and time off | Block a day for the whole salon or for one stylist |
-| Appointments | See every booking Ava has taken, in one place |
-
-Changes show up within a few minutes.
-
-## Privacy and safety
-
-- A caller must give the **name on the booking** before anything can be changed or cancelled.
-- Ava does not guess. Prices, times and policies always come from your own data.
-- She does not give medical or skin advice. She tells the caller that a stylist can discuss it at the appointment.
-- Customer details stay in your own Google Sheet. Keep it private and share it only with your team.
-
-## Good to know
-
-- Ava books **one service at a time**.
-- She is an AI assistant and will say so if a caller asks.
-- If something goes wrong, she apologises and tells the caller that the salon will follow up.
-
-## Frequently asked questions
-
-**Will callers know it is an AI?**
-Ava sounds natural, but she will not pretend to be a person if asked. Most callers just want a quick booking.
-
-**How long does setup take?**
-Once I have your services, prices, stylists and opening hours, setup is quick. You can test it on the demo line before going live.
-
-**Do I need to change my booking software?**
-No. Bookings are kept in a simple Google Sheet. If you already use another booking system, tell me which one and we can discuss connecting it.
-
-**What does it cost?**
-Your first 10 calls are free. After that, pricing depends on your salon size and call volume.
-
-**What happens after the free trial?**
-If you like Ava, we agree on a simple monthly plan. If not, you pay nothing.
-
-## Get started
-
-1. Call the demo line and try a booking.
-2. Fill in the free-trial form on the website.
-3. Send me your service list, stylists and opening hours, and I will set Ava up for your salon.
-   
-*Developers: technical setup instructions are in [Setup File](SETUP.md).*
-
-##  Author
-
-**Faheem Abbas**
-
- AI Automation Specialist | ⚙️ n8n Expert | 🧠 AI Agents | 🚀 AI-Powered Business Automation | 🎯 Lead Generation | 🔗 API Integrations | 📞 Calling Agents
-
-###  Contact
-
-For custom implementation or commercial use, please contact me:
-<br>
-
-<a href="https://wa.me/923002120566">
-  <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
-</a>
-
-<a href="https://www.linkedin.com/in/faheem-abbas-ai-automation-specialist/">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-</a>
-
-<a href="mailto:info.bluemoonways@gmail.com">
-  <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
-</a>
+🔗 **Live Website Demo:** [https://bluemoonways-ai-salon.vercel.app/](https://bluemoonways-ai-salon.vercel.app/)
 
 ---
 
-## 🌐 Portfolio Link:
-https://bluemoonways.vercel.app/
-<br>
+## 🌟 Key Features
 
+* 📞 **24/7 Voice AI Receptionist:** Answers customer voice calls and interactive web calls with natural, human-like voice responses.
+* 📅 **Smart Appointment Management:** Books, reschedules, and cancels client slots dynamically.
+* 🔄 **Real-Time Availability Checks:** Queries Google Sheets / Calendar to prevent double-booking.
+* 📲 **Automated Confirmations:** Triggers SMS/WhatsApp notification updates and reminders.
+* 💈 **Dynamic Service & FAQ Guidance:** Answers questions regarding salon services, pricing, operating hours, and location.
+* 👤 **Human Escalation:** Smoothly forwards complex queries or complaints to human salon managers.
 
-*Developers: technical setup instructions are in [SETUP.md](SETUP.md).*
+---
+
+## 🏗️ System Architecture
+
+```text
+[ Web Client / Phone Caller ] 
+             │
+      (Voice Stream)
+             ▼
+      [ Vapi.ai Agent ] ──(Custom Tools Webhook)──► [ Google Apps Script ]
+                                                            │
+                                                   ┌────────┴────────┐
+                                                   ▼                 ▼
+                                          [ Google Sheets ]   [ Twilio SMS / WhatsApp ]
+```
+
+* **Frontend:** Responsive HTML5, Tailwind CSS, JavaScript (Deployed on Vercel)
+* **Voice Engine:** [Vapi.ai](https://vapi.ai) (Speech-to-Text, LLM Processing, Text-to-Speech)
+* **Backend Endpoint:** Google Apps Script Web App
+* **Database & Scheduling:** Google Sheets / Google Calendar API
+* **Notification System:** Twilio SMS / WhatsApp Business API
+
+---
+
+## 📁 Repository Structure
+
+```text
+Salon-AI-Receptionist/
+├── Landing_page/         # Web landing page & live call interface (Deployed to Vercel)
+│   └── index.html        # Main interface with embedded Vapi Web SDK
+├── Vapi/                 # Vapi AI agent settings, system prompts, and tool schemas
+│   └── assistant.json    # Complete Vapi agent setup configuration
+├── apps-script/          # Serverless Google Apps Script backend
+│   └── Code.gs           # Webhook handler for availability, booking, & notifications
+├── .gitignore
+├── README.md             # Project documentation
+└── SETUP.md              # Detailed step-by-step setup guide
+```
+
+---
+
+## ⚡ Quick Setup Guide
+
+### 1. Backend Setup (Google Apps Script)
+1. Create a Google Sheet with columns for logging reservations: `Name`, `Phone`, `Service`, `Date`, `Time`, `Status`.
+2. Open **Extensions > Apps Script** and paste the code from `apps-script/Code.gs`.
+3. Deploy as a **Web App** (*Execute as: Me*, *Who has access: Anyone*).
+4. Copy the Web App Deployment URL.
+
+### 2. Voice Agent Configuration (Vapi.ai)
+1. Import the JSON configuration from `Vapi/assistant.json` into your Vapi Dashboard.
+2. Link the custom function tools to your Google Apps Script Web App URL.
+3. Attach your phone number (via Twilio/Vapi) to the assistant.
+
+### 3. Frontend Deployment (Vercel)
+1. Configure your **Vapi Public Key** and **Assistant ID** in `Landing_page/index.html`.
+2. Push your code to GitHub and connect the repository to Vercel for automatic deployment.
+
+---
+
+## 👨‍💻 Author
+
+**Faheem Abbas (bluemoonways)**  
+*AI Automation Developer & AI Specialist*  
+* GitHub: [@bluemoonways](https://github.com/bluemoonways)  
+* Live Project: [bluemoonways-ai-salon.vercel.app](https://bluemoonways-ai-salon.vercel.app/)
